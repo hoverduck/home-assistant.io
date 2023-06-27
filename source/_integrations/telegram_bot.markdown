@@ -28,6 +28,7 @@ Send a notification.
 | `message`                 |       no | Message body of the notification. |
 | `title`                   |      yes | Optional title for your notification. Will be composed as '%title\n%message'. |
 | `target`                  |      yes | An array of pre-authorized chat_ids or user_ids to send the notification to. Defaults to the first allowed chat_id. |
+| `bot_name`                |      yes |  Name of the bot to send the notification as. If not present, the first bot in the config is the default. |
 | `parse_mode`              |      yes | Parser for the message text: `markdownv2`, `html` or `markdown`. |
 | `disable_notification`    |      yes | True/false for send the message silently. iOS users and web users will not receive a notification, Android users will receive a notification with no sound. Defaults to False. |
 | `disable_web_page_preview`|      yes | True/false for disable link previews for links in the message. |
@@ -51,6 +52,7 @@ Send a photo.
 | `password`                |      yes | Password (or bearer token) for a URL which require HTTP authentication. |
 | `authentication`          |      yes | Define which authentication method to use. Set to `digest` to use HTTP digest authentication, or `bearer_token` for OAuth 2.0 bearer token authentication. Defaults to `basic`.  |
 | `target`                  |      yes | An array of pre-authorized chat_ids or user_ids to send the notification to. Defaults to the first allowed chat_id. |
+| `bot_name`                |      yes |  Name of the bot to send the notification as. If not present, the first bot in the config is the default. |
 | `parse_mode`              |      yes | Parser for the message text: `markdownv2`, `html` or `markdown`. |
 | `disable_notification`     |      yes | True/false for send the message silently. iOS users and web users will not receive a notification, Android users will receive a notification with no sound. Defaults to False. |
 | `verify_ssl`              |      yes | True/false for checking the SSL certificate of the server for HTTPS URLs. Defaults to True. |
@@ -74,6 +76,7 @@ Send a video.
 | `password`                |      yes | Password (or bearer token) for a URL which require HTTP authentication. |
 | `authentication`          |      yes | Define which authentication method to use. Set to `digest` to use HTTP digest authentication, or `bearer_token` for OAuth 2.0 bearer token authentication. Defaults to `basic`.  |
 | `target`                  |      yes | An array of pre-authorized chat_ids or user_ids to send the notification to. Defaults to the first allowed chat_id. |
+| `bot_name`                |      yes |  Name of the bot to send the notification as. If not present, the first bot in the config is the default. |
 | `parse_mode`              |      yes | Parser for the message text: `markdownv2`, `html` or `markdown`. |
 | `disable_notification`    |      yes | True/false to send the message silently. iOS users and web users will not receive a notification. Android users will receive a notification with no sound. Defaults to False. |
 | `verify_ssl`              |      yes | True/false for checking the SSL certificate of the server for HTTPS URLs. Defaults to True. |
@@ -96,6 +99,7 @@ Send an animation.
 | `password`                |      yes | Password (or bearer token) for a URL which require HTTP authentication. |
 | `authentication`          |      yes | Define which authentication method to use. Set to `digest` to use HTTP digest authentication, or `bearer_token` for OAuth 2.0 bearer token authentication. Defaults to `basic`.  |
 | `target`                  |      yes | An array of pre-authorized chat_ids or user_ids to send the notification to. Defaults to the first allowed chat_id. |
+| `bot_name`                |      yes |  Name of the bot to send the notification as. If not present, the first bot in the config is the default. |
 | `parse_mode`              |      yes | Parser for the message text: `markdownv2`, `html` or `markdown`. |
 | `disable_notification`    |      yes | True/false to send the message silently. iOS users and web users will not receive a notification. Android users will receive a notification with no sound. Defaults to False. |
 | `verify_ssl`              |      yes | True/false for checking the SSL certificate of the server for HTTPS URLs. Defaults to True. |
@@ -119,6 +123,7 @@ Send a voice message.
 | `password`                |      yes | Password (or bearer token) for a URL which require HTTP authentication. |
 | `authentication`          |      yes | Define which authentication method to use. Set to `digest` to use HTTP digest authentication, or `bearer_token` for OAuth 2.0 bearer token authentication. Defaults to `basic`.  |
 | `target`                  |      yes | An array of pre-authorized chat_ids or user_ids to send the notification to. Defaults to the first allowed chat_id. |
+| `bot_name`                |      yes |  Name of the bot to send the notification as. If not present, the first bot in the config is the default. |
 | `disable_notification`    |      yes | True/false to send the message silently. iOS users and web users will not receive a notification. Android users will receive a notification with no sound. Defaults to False. |
 | `verify_ssl`              |      yes | True/false for checking the SSL certificate of the server for HTTPS URLs. Defaults to True. |
 | `timeout`                 |      yes | Timeout for sending voice in seconds. Will help with timeout errors (poor internet connection, etc) |
@@ -141,6 +146,7 @@ Send a sticker.
 | `password`                |      yes | Password (or bearer token) for a URL which require HTTP authentication. |
 | `authentication`          |      yes | Define which authentication method to use. Set to `digest` to use HTTP digest authentication, or `bearer_token` for OAuth 2.0 bearer token authentication. Defaults to `basic`.  |
 | `target`                  |      yes | An array of pre-authorized chat_ids or user_ids to send the notification to. Defaults to the first allowed chat_id. |
+| `bot_name`                |      yes |  Name of the bot to send the notification as. If not present, the first bot in the config is the default. |
 | `disable_notification`     |      yes | True/false for send the message silently. iOS users and web users will not receive a notification, Android users will receive a notification with no sound. Defaults to False. |
 | `verify_ssl`              |      yes | True/false for checking the SSL certificate of the server for HTTPS URLs. Defaults to True. |
 | `timeout`                 |      yes | Timeout for sending photo in seconds. Will help with timeout errors (poor internet connection, etc) |
@@ -163,6 +169,7 @@ Send a document.
 | `password`                |      yes | Password (or bearer token) for a URL which require HTTP authentication. |
 | `authentication`          |      yes | Define which authentication method to use. Set to `digest` to use HTTP digest authentication, or `bearer_token` for OAuth 2.0 bearer token authentication. Defaults to `basic`.  |
 | `target`                  |      yes | An array of pre-authorized chat_ids or user_ids to send the notification to. Defaults to the first allowed chat_id. |
+| `bot_name`                |      yes |  Name of the bot to send the notification as. If not present, the first bot in the config is the default. |
 | `parse_mode`              |      yes | Parser for the message text: `markdownv2`, `html` or `markdown`. |
 | `disable_notification`    |      yes | True/false for send the message silently. iOS users and web users will not receive a notification, Android users will receive a notification with no sound. Defaults to False. |
 | `verify_ssl`              |      yes | True/false for checking the SSL certificate of the server for HTTPS URLs. Defaults to True. |
@@ -182,6 +189,7 @@ Send a location.
 | `latitude`                |       no | The latitude to send. |
 | `longitude`               |       no | The longitude to send.  |
 | `target`                  |      yes | An array of pre-authorized chat_ids or user_ids to send the notification to. Defaults to the first allowed `chat_id`. |
+| `bot_name`                |      yes |  Name of the bot to send the notification as. If not present, the first bot in the config is the default. |
 | `disable_notification`    |      yes | True/false for send the message silently. iOS users and web users will not receive a notification, Android users will receive a notification with no sound. Defaults to False. |
 | `resize_keyboard`         |      yes | True/false for resizing the keyboard vertically for optimal fit. Defaults to False. |
 | `one_time_keyboard`       |      yes | True/false for hiding the keyboard as soon as it’s been used. The keyboard will still be available, but clients will automatically display the usual letter-keyboard in the chat - the user can press a special button in the input field to see the custom keyboard again. Defaults to False. |
@@ -198,6 +206,7 @@ Send a poll.
 | `question`                |       no | Poll question, 1-300 characters. |
 | `options`                 |       no | List of answer options, 2-10 strings 1-100 characters each.  |
 | `target`                  |      yes | An array of pre-authorized chat_ids or user_ids to send the notification to. Defaults to the first allowed `chat_id`. |
+| `bot_name`                |      yes |  Name of the bot to send the notification as. If not present, the first bot in the config is the default. |
 | `is_anonymous`            |      yes | True/false for if the poll needs to be anonymous, defaults to True. |
 | `allows_multiple_answers` |      yes | True/false for if the poll allows multiple answers, defaults to False. |
 | `open_period`             |      yes | Amount of time in seconds the poll will be active after creation, 5-600. |

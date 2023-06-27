@@ -21,6 +21,7 @@ To integrate this into Home Assistant, add the following section to your `config
 # Example configuration.yaml entry
 telegram_bot:
   - platform: polling
+    name: botname
     api_key: YOUR_API_KEY
     allowed_chat_ids:
       - 123456789 # example id of a user
@@ -32,6 +33,11 @@ allowed_chat_ids:
   description: A list of ids representing the users and group chats that are authorized to interact with the bot.
   required: true
   type: list
+  name:
+  description: A simplified name for your bot to identify it when calling services
+  required: false
+  type: string
+  default: The API key is split by the colon, the first part is used
 api_key:
   description: The API token of your bot.
   required: true

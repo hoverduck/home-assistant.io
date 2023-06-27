@@ -19,6 +19,7 @@ To integrate this into Home Assistant, add the following section to your `config
 # Example configuration.yaml entry
 telegram_bot:
   - platform: broadcast
+    name: botname
     api_key: YOUR_API_KEY
     allowed_chat_ids:
       - 123456789 # example id of a user
@@ -26,6 +27,11 @@ telegram_bot:
 ```
 
 {% configuration %}
+name:
+  description: A simplified name for your bot to identify it when calling services
+  required: false
+  type: string
+  default: The API key is split by the colon, the first part is used
 allowed_chat_ids:
   description: A list of ids representing the users and group chats to which messages can be send. Default the message will be send to the first alllowed chat_id. By using the `target` service data attribute the message can be send to other chat_ids from the list.
   required: true

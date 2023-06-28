@@ -79,12 +79,14 @@ telegram_bot:
       - CHAT_ID_1
       - CHAT_ID_2
       - CHAT_ID_3
+    name: botname #Optional, if you have more than one bot
 
 # Example configuration.yaml entry for the notifier
 notify:
   - name: NOTIFIER_NAME
     platform: telegram
     chat_id: CHAT_ID_2
+    bot_name: botname #Optional, if you have more than one bot
 ```
 
 Refer to the platforms mentioned in the
@@ -101,6 +103,10 @@ chat_id:
   description: The chat ID of your user.
   required: true
   type: integer
+bot_name:
+  description: The name of telegram_bot to use for this notify service. Will default to the first configured bot if not present or does not match any bot.
+  required: false
+  type: string
 {% endconfiguration %}
 
 To use notifications, please see the [getting started with automation page](/getting-started/automation/).

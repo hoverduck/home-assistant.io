@@ -21,6 +21,7 @@ telegram_bot:
     allowed_chat_ids:
       - 12345
       - 67890
+    name: botname
 ```
 
 {% configuration %}
@@ -31,6 +32,10 @@ allowed_chat_ids:
 api_key:
   description: The API token of your bot.
   required: true
+  type: string
+name:
+  description: A unique name to identify this bot in service calls. Only necessary if multiple bots are configured.
+  required: false
   type: string
 parse_mode:
   description: Default parser for messages if not explicit in message data, either `html` or `markdown`.
